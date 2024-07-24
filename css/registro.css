@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+    
+}
+
+.colorFondo{
+    background-color: #3e4451;
+}
+
+body{
+    
+    background-color: #3e4451;
+}
+
+
+.container{
+    display: flex;
+    background-color: #495162;
+    width: 400px;
+    height: 320px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    padding-top: 10px;
+}
+
+.tamaño{
+    
+    width: 300px;
+}
