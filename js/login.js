@@ -1,20 +1,25 @@
-let inicioSesion = document.getElementById("iniciarSesion")
+let inicioSesion = document.getElementById("botonLogin")
 
-inicioSesion.addEventListener('submit',function(evento){
+let email = document.getElementById("exampleInputEmail1");
+
+let contrasenia = document.getElementById("exampleInputPassword1");
+
+inicioSesion.addEventListener('click',function(evento){
     
     evento.preventDefault();
 
-    let email = document.getElementById("exampleInputEmail1").value;
-    
-    let contraseña = document.getElementById("exampleInputPassword1").value;
-
     let datosUsuario = JSON.parse(localStorage.getItem('usuario'));
-    
-    if (datosUsuario && datosUsuario.email === email && datosUsuario.contraseña === contraseña) {
-        alert('Inicio de sesion exitoso')
-        
-    } else{
-        alert('Datos incorrectos intente de nuevo')
+    console.log(datosUsuario);
+
+    if(datosUsuario){
+        if (datosUsuario.email == email.value && datosUsuario.contrasenia == contrasenia.value) {
+            alert('Inicio de sesion exitoso')
+        } else{
+            alert('Datos incorrectos intente de nuevo')
+            
+        }
+    }else{
+        alert('No hay datos')
     }
 
 })

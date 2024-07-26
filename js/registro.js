@@ -1,18 +1,32 @@
 let registrar = document.getElementById("registroCuenta")
+let email = document.getElementById("exampleInputEmail1");
+let contrasenia = document.getElementById("exampleInputPassword1");
 
+let users = [];
 
 registrar.addEventListener('submit',function (evento) {
-    
-    
-    
     evento.preventDefault();
-    
-    let email = document.getElementById("exampleInputEmail1").value;
-    
-    let contraseña = document.getElementById("exampleInputPassword1").value;
+    if (email.value == '' || email.value == null || contrasenia.value == '' || contrasenia.value == null) {
+        alert('Datos ingresados incorrectos')
+        email.value = "";
+        contrasenia.value = "";
+    } else {
+        
 
-    let datosUsuario = [email, contraseña];
-    localStorage.setItem('usuario', JSON.stringify(datosUsuario));
+        let objectUser = {
+            userName: email.value,
+            password: contrasenia.value
+        }
 
-    alert('Registro exitoso. ¡Ahora puedes iniciar sesión')
+        users.push(objectUser);    
+    
+        //let datosUsuario = [email, contrasenia];
+        localStorage.setItem('usuario', JSON.stringify(users));
+
+        email.value = "";
+        contrasenia.value = "";
+
+        alert('Registro exitoso. ¡Ahora puedes iniciar sesión')
+    }
+    
 })
