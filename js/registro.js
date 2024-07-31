@@ -1,32 +1,20 @@
 let registrar = document.getElementById("registroCuenta")
-let email = document.getElementById("exampleInputEmail1");
-let contrasenia = document.getElementById("exampleInputPassword1");
 
-let users = [];
+registrar.addEventListener('submit', (event)=>{
+    event.preventDefault()
+    const email = document.querySelector('#exampleInputEmail1').value
+    const contrasenia = document.querySelector('#exampleInputPassword1').value
 
-registrar.addEventListener('submit',function (evento) {
-    evento.preventDefault();
-    if (email.value == '' || email.value == null || contrasenia.value == '' || contrasenia.value == null) {
-        alert('Datos ingresados incorrectos')
-        email.value = "";
-        contrasenia.value = "";
-    } else {
+    const users = JSON.parse(localStorage.getItem('users')) || []
+    const userRegistered = users.find(user => user.email === email)
+    if (userRegistered) {
+        return alert('Usuario ya registrado')
         
-
-        let objectUser = {
-            userName: email.value,
-            password: contrasenia.value
-        }
-
-        users.push(objectUser);    
-    
-        //let datosUsuario = [email, contrasenia];
-        localStorage.setItem('usuario', JSON.stringify(users));
-
-        email.value = "";
-        contrasenia.value = "";
-
-        alert('Registro exitoso. ¡Ahora puedes iniciar sesión')
     }
-    
+
+    users.push({email: email, contrasenia: contrasenia  })
+    localStorage.setItem('users', JSON.stringify(users))
+    alert('registro exitoso')
+
+    window.location.href = 'login.html'
 })

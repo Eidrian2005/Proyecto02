@@ -1,25 +1,18 @@
-let inicioSesion = document.getElementById("botonLogin")
+const loginForm = document.querySelector('#iniciarSesion')
 
-let email = document.getElementById("exampleInputEmail1");
+loginForm.addEventListener('submit', (events) =>{
+    events.preventDefault
 
-let contrasenia = document.getElementById("exampleInputPassword1");
+    const email = document.querySelector('#exampleInputEmail1').value
+    const contrasenia = document.querySelector('#exampleInputPassword1').value
+    const users = JSON.parse(localStorage.getItem('users')) || []
 
-inicioSesion.addEventListener('click',function(evento){
-    
-    evento.preventDefault();
-
-    let datosUsuario = JSON.parse(localStorage.getItem('usuario'));
-    console.log(datosUsuario);
-
-    if(datosUsuario){
-        if (datosUsuario.email == email.value && datosUsuario.contrasenia == contrasenia.value) {
-            alert('Inicio de sesion exitoso')
-        } else{
-            alert('Datos incorrectos intente de nuevo')
-            
-        }
-    }else{
-        alert('No hay datos')
+    const validUser = users.find(users => users.email === email && users.contrasenia === contrasenia)
+    if (!validUser) {
+        return alert('Usuario y/o contraseña incorrectos')
     }
+    alert('bienvenido a Task administre')
+    
+    window.location.href = 'index.html'
 
 })

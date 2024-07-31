@@ -9,10 +9,10 @@
   </head>
   <body>
 <!-- Zona del header -->
-  <header>
+  <header class="">
 
     <div class="logo">
-      <img src="/img/logo_ice (1).png" alt="">
+      <img src="" alt="">
   </div>
 
       
@@ -22,10 +22,11 @@
 
 
       <nav> 
-          <ul class="navegacion">
-            <button id="agregar">agregar tarea</button>
-              <button class="agregar" >agregar evento</button>
-              
+          <ul class="navegacion" id="logo">
+            <img src="/img/pony-town-Arquemias-boop-sit-padded-4x.gif" alt="">
+            <button id="agregar">Agregar Tarea</button>
+              <button id="agregarEventos" >Agregar Evento</button>
+              <img src="" alt="">
           </ul>
       </nav>
   </div>
@@ -33,33 +34,51 @@
   </header>
 <!-- Fin de la zona del header -->
 
-<br>
-<h1>hola</h1>
+
+<!--zona del header -->
   <div id="contenedorPadre">
 
+<div id="contenedorEventosyTareas" class="">
 
   <h3>Tareas</h3>
 
+      <input id="tarea" type="text"> 
+      
+        <select id="prioridad" name="Prioridad" class="selector">
+          <option value="">Seleccionar Prioridad</option>
+            <option value="baja">Baja</option>
+            <option value="media">Media</option>
+            <option value="alta">Alta</option>
+        </select>
 
 
-  <input id="tarea" type="text">
 
-  <div id="contenedorTarea">
+
+  <h3>Eventos</h3>
+
+      <input id="Eventos" type="text">
+
+      <input type="date" class="selector" value="" id="fecha">
+
+</div>
+
+
+
+<div id="contenedorInputs" class="">
+
+      <div id="contenedorTarea" class="tareasCont">
+          
+      </div>
+
+      <div id="contenedorEventos" class="eventosCont">
+          
+      </div>
+
+</div>
 
 
 
   </div>
-
-  <nav aria-label="Page navigation example">
-    <ul class="pagination">
-      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item"><a class="page-link" href="#">Next</a></li>
-    </ul>
-  </nav>
-
 
   </div>
 

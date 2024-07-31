@@ -27,17 +27,23 @@ body{
 
 /*zona del header*/
 
+.headerImg{
+width: 100%;
+justify-content: space-between;
+}
+
 header{
+    
     display: flex !important;
     height: 100px;
     background-color: #495162;
     margin-bottom: 10%;
 }
 
-#contenedorHead{
+
+.contenedorImg{
+    display: flex;
     justify-content: space-between;
-    width: 30%;
-    
 }
 
 .navegacion{
@@ -59,8 +65,19 @@ header{
     align-items: center;
 
 }
+
+.imgIcono{
+    display: flex;
+    align-items: center;
+}
+
+.imgIcono img{
+    width: 75px;
+    cursor: pointer;
+}
+
 #logo img{
-    width: 100px;
+    width: 80px;
     cursor: pointer;
 }
 

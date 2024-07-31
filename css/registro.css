@@ -36,11 +36,6 @@ header{
     margin-bottom: 10%;
 }
 
-#contenedorHead{
-    justify-content: space-between;
-    width: 30%;
-    
-}
 
 .navegacion{
     padding: 25px;
@@ -50,6 +45,7 @@ header{
     justify-content: space-between;
     cursor: pointer;
 }
+
 
 .navegacion > li > a{
     text-decoration: none;

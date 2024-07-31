@@ -1,3 +1,5 @@
+/*inico de la zona de edicion general*/
+
 *{
     padding: 0;
     margin: 0;
@@ -6,14 +8,37 @@
 
 header{
     display: flex !important;
-    height: 79px;
+    height: 110px;
     background-color: #495162;
+    margin-bottom: 5%;
+    justify-content: center;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+
+}
+#logo img{
+    width: 80px;
+    cursor: pointer;
+}
+
+.bordeo{
+    border: #000 solid;
+}
+
+.bordeo-Dash{
+    border: #000 dashed;
+}
+
+.Dis-f{
+display: flex;
 }
 
 #contenedorHead{
     justify-content: space-between;
-    width: 30%;
-    border: #000 solid;
+    width: 600px;
 }
 
 .navegacion{
@@ -34,23 +59,132 @@ body{
     background-color: #3e4451;
 }
 
+
+/*fin de la zona de edicion general*/
+
+/*zona de mediaquerys*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*fin de la zona de mediaquerys*/
+
+
+
+
+/*Zona de tareas y eventos*/
+
+h3{
+    color: #ffffff;
+}
+
+#tarea{
+    box-shadow: 0 2px 4px rgba(18, 46, 88, 5);
+    border-radius: 6px;
+    border: 1px solid #3e4451;
+}
+
+
+
+#Eventos{
+    
+    border-radius: 6px;
+    border: 1px solid #3e4451;
+    box-shadow: 0 2px 4px rgba(18, 46, 88, 5);
+}
+
+
 #agregar{
     border: none;
-    background-color: #004b93;
+    background-color: #0d6efd;
     border-radius: 5px;
     width: 200px;
     color: #ffffff;
 }
 
-.agregar{
+#agregarEventos{
     border: none;
-    background-color: #004b93;
+    background-color: #0d6efd;
     border-radius: 5px;
     width: 200px;
     color: #ffffff;
+    
 }
 
 
+#contenedorEventosyTareas{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+#contenedorInputs{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+/*Fin de la zona de tareas y eventos*/
+
+/*zona de escritos*/
+
+p{
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.btnEliminar{
+    border: none;
+    background-color: #c23e3e;
+    border-radius: 5px;
+    width: 70px;
+    color: #ffffff;
+}
+
+.btnEditar{
+    border: none;
+    background-color: #0d6efd;
+    border-radius: 5px;
+    width: 70px;
+    color: #ffffff;
+}
+
+.selector{
+    box-shadow: 0 2px 4px rgba(18, 46, 88, 5);
+    border-radius: 6px;
+    border: 1px solid #3e4451;
+}
+
+.fechaTexto{
+    font-size: 15px;
+}
+
+
+/*zona de escritos*/
 
 
 
