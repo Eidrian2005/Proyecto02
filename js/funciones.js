@@ -1,9 +1,13 @@
+/// inicio de la zona de tareas///
+
 const tarea = document.getElementById("tarea")
 const prioridad = document.getElementById("prioridad")
 const agregar = document.getElementById("agregar")
 const contenedorTarea = document.getElementById("contenedorTarea")
 
-let recuperacion;
+///zona de recuperacion de datos de localstorage///
+
+let recuperacion; //lista a la espera de ser llamada
 let listaGuardada = localStorage.getItem("lista")
 if (listaGuardada) {
     recuperacion = JSON.parse(listaGuardada)
@@ -12,17 +16,15 @@ if (listaGuardada) {
 }
 console.log(listaGuardada);
 
+///fin de la zona de recuperacion de datos de localstorage///
+
+///comienzo de la zona de eventos para agregar las tareas///
 
 agregar.addEventListener("click",function() {
 
-
-
 if (tarea.value != null && tarea.value != '' && prioridad.value != null && prioridad.value != '') {
 
-
-
-
-    let objetoTarea = {
+    let objetoTarea = {  //lista de objetos donde se guardan los datos de prioridad y tareas
         tarea: tarea.value,
         prioridad: prioridad.value
     }
@@ -39,6 +41,8 @@ if (tarea.value != null && tarea.value != '' && prioridad.value != null && prior
 
 })
 
+
+mostrarTareas();
 
 function mostrarTareas() {
 
@@ -61,16 +65,15 @@ function mostrarTareas() {
     pTarea.id = "parrafoT"
     pTarea.className = "color"
 
-btnEliminar.classList.add("btnEliminar");
+btnEliminar.classList.add("chicharron");
 btnEditar.classList.add("btnEditar");
+prioridadTexto.classList.add("prioridadTexto");
 contenedorTarea.appendChild(pTarea)
 contenedorTarea.appendChild(prioridadTexto)
 contenedorTarea.appendChild(btnEliminar)
 contenedorTarea.appendChild(btnEditar)
 
-
-
-btnEditar.addEventListener('click', () => {
+btnEditar.addEventListener('click', () => { // para ahorrarse lineas de codigo
     const nuevaTarea = prompt('Edita la tarea:', pTarea.innerHTML);
     if (nuevaTarea !== null) {
         pTarea.innerHTML = nuevaTarea;
@@ -104,12 +107,12 @@ btnEliminar.addEventListener("click", function(){
 })
     });
 
+} //cierra la funcion no cofundir
 
-} //cierra la funcion mostrar eventos
+/// fin de zona de tareas///
 
 
-
-///zona de eventos
+///inicio de zona de eventos///
 
 const fecha = document.getElementById("fecha")
 const eventos = document.getElementById("Eventos")
@@ -123,9 +126,6 @@ if (listaGuardada2) {
 } else {
     recuperacion2 = []
 }
-
-
-
 
 agregarEventos.addEventListener("click",function() {
     if (eventos.value != null && eventos.value != '' && fecha.value != null && fecha.value != '') {
@@ -145,6 +145,7 @@ agregarEventos.addEventListener("click",function() {
     }
     })
 
+    mostrarEventos()
 
 function mostrarEventos() {
 
@@ -158,7 +159,7 @@ function mostrarEventos() {
     let btnEliminar2 = document.createElement("button")
     let btnEditar2 = document.createElement("button")
 
-
+    
     btnEliminar2.innerHTML = "Eliminar"
     btnEditar2.innerHTML = "Editar"
     fechaTexto.innerHTML = fechaF
@@ -167,7 +168,7 @@ function mostrarEventos() {
     pEvento.className = "color"
 
     
-btnEliminar2.classList.add("btnEliminar");
+btnEliminar2.classList.add("chicharron");
 btnEditar2.classList.add("btnEditar");
 fechaTexto.classList.add("fechaTexto")
 contenedorEventos.appendChild(pEvento)
@@ -183,7 +184,7 @@ if (nuevaTarea !== null) {
     fechaTexto.innerHTML = prompt('Edita la Fecha:', fechaTexto.innerHTML);
     alert('Evento y Fecha actualizadas correctamente.');
 
-    // Actualizar los datos en el localStorage
+    // Actualiza los datos en el localStorage
     recuperacion2[indice2].evento = nuevaTarea;
     recuperacion2[indice2].fecha = fechaTexto.innerHTML;
     localStorage.setItem('lista2', JSON.stringify(recuperacion2));

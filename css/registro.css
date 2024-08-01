@@ -1,31 +1,19 @@
-
 /*zona de ajustes generales*/
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     color: #fff;
-    
 }
-
 
 body{
-    
     background-color: #3e4451;
 }
-
 
 .borde{
     border: #000 solid;
 }
-
-
-
-
-
 /*Fin de la zona de ajustes generales*/
-
-
 
 /*zona del header*/
 
@@ -36,7 +24,6 @@ header{
     margin-bottom: 10%;
 }
 
-
 .navegacion{
     padding: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -45,7 +32,6 @@ header{
     justify-content: space-between;
     cursor: pointer;
 }
-
 
 .navegacion > li > a{
     text-decoration: none;
@@ -57,17 +43,33 @@ header{
     align-items: center;
 
 }
+
 #logo img{
     width: 100px;
     cursor: pointer;
 }
 
-#contenedorHead{
-    width: 100%;
-}
-
 /*Fin de la zona del header*/
 
+/*zona de mediaquerys*/
+
+@media (max-width:600px){
+    #logo{
+        margin: auto;
+    }
+    .tamaño{
+        text-align: center;
+        margin: auto;
+    }
+    #exampleInputEmail1{
+        margin: auto;
+    }
+    #exampleInputPassword1{
+        margin: auto;
+    }
+}
+
+/*fin de la zona de mediaquerys*/
 
 /*Zona del registro*/
 
@@ -81,7 +83,6 @@ header{
 }
 
 .tamaño{
-    
     width: 300px;
 }
 
@@ -89,8 +90,4 @@ header{
     color:#fff ;
 }
 
-.row{
-    
-}
-
-/*fon de la zona de registro*/
+/*fin de la zona de registro*/

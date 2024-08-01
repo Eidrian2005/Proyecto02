@@ -4,26 +4,17 @@
     margin: 0;
     box-sizing: border-box;
     color: #fff;
-    
 }
-
 
 body{
-    
     background-color: #3e4451;
 }
-
 
 .borde{
     border: #000 solid;
 }
 
-
-
-
 /*Fin de la zona de ajustes generales*/
-
-
 
 /*zona del header*/
 
@@ -33,13 +24,11 @@ justify-content: space-between;
 }
 
 header{
-    
     display: flex !important;
     height: 100px;
     background-color: #495162;
     margin-bottom: 10%;
 }
-
 
 .contenedorImg{
     display: flex;
@@ -81,12 +70,7 @@ header{
     cursor: pointer;
 }
 
-#contenedorHead{
-    width: 100%;
-}
-
 /*Fin de la zona del header*/
-
 
 /*Zona del login*/
 
@@ -109,3 +93,20 @@ header{
 }
 
 /*fin de la zona de login*/
+
+/*zona de mediaquerys*/
+
+@media (max-width:600px){
+    .tamaño{
+        text-align: center;
+        margin: auto;
+    }
+    #exampleInputEmail1{
+        margin: auto;
+    }
+    #exampleInputPassword1{
+        margin: auto;
+    }
+}
+
+/*zona de mediaquerys*/
